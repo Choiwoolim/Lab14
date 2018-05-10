@@ -1,32 +1,31 @@
-package edu.handong.csee.java.lab14.prob2;
+package edu.handong.csee.java.lab14.prob2;			//Package name.
+import java.util.InputMismatchException;			//Using InputMismatchException.
+import java.util.Scanner;							//Using scanner.
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+public class Inexception {							//Class name is Inexception
+	private int x = 0;								//Declare the private integer variable x
+	private int y = 0;								//Declare the private integer variable y
 
-public class Inexception {
-	private int x = 0;
-	private int y = 0;
-	
-	public Inexception() {
+	public Inexception() {							//Instantiate the exception class.
 	}
-	
-	public void error_det() {
-		try {
-			Scanner keyboard = new Scanner(System.in);
-			System.out.print("x: ");
-			x = keyboard.nextInt();
-			System.out.print("y: ");
-			y = keyboard.nextInt();
-			System.out.println(this.x / this.y);
+
+	public void error_det() {						//Create the public void type eroor_det
+		try {										//Find the exception process.
+			Scanner keyboard = new Scanner(System.in);	//Declare the keyboard scanner.		
+			System.out.print("x: ");					//print the following letter
+			x = keyboard.nextInt();						//assign x is input value.
+			System.out.print("y: ");					//print the y
+			y = keyboard.nextInt();						//assign y is input value.
+			System.out.println(this.x / this.y);		//print x/y
 		}
-		catch(ArithmeticException e) {
-			System.out.println("java.Lang.ArithmeticException: " + e.getMessage());
+		catch(ArithmeticException e) {					//Find the exception
+			System.out.println("java.Lang.ArithmeticException: " + e.getMessage());		//print the error message
 		}
-		catch(InputMismatchException e) {
-			System.out.println("java.utilInputMismatchException");
+		catch(InputMismatchException e) {				//find the other exception
+			System.out.println("java.utilInputMismatchException");			//print the following sentence.
 		}
-		catch(Exception e) {
-			System.out.println("Some other exception has occured: " + e.getMessage());
+		catch(Exception e) {							//find the another exception
+			System.out.println("Some other exception has occured: " + e.getMessage());	//print the following error message.
 		}
 	}
 
