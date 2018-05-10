@@ -1,23 +1,23 @@
-package edu.handong.csee.java.lab14.prob5;
-import java.util.Scanner;
+package edu.handong.csee.java.lab14.prob5;			//package name
+import java.util.Scanner;							//using scanner
 
-public class Prob5 {
-	public static void main(String[] a) {
-		try {
-			Scanner keyboard = new Scanner(System.in);
-			String str = keyboard.nextLine();
-			Prob5.myTest(str);
-		} catch(MyException mae) {
-			System.out.println("Inside catch block: " + mae);
+public class Prob5 {								//Class name is prob5 and it can be main class
+	public static void main(String[] a) {			//call main method
+		try {										//find the exception process
+			Scanner keyboard = new Scanner(System.in);		//using keyboard scanner.
+			String str = keyboard.nextLine();				//declare the string type str variable. and assign the input string
+			Prob5.myTest(str);								//call myTest method.
+		} catch(MyException mae) {							//if exception happened
+			System.out.println("Inside catch block: " + mae);	//print the following setence.
 		}
 	}
 	
-	static void myTest(String str) throws MyException{
-		if(str.equals("null")){
-			throw new MyException("String val is null");
+	static void myTest(String str) throws MyException{			//call myTest method
+		if(str.equals("null")){								//string is null
+			throw new MyException("String val is null");	//store the new exception
 		}
-		else
-			System.out.println("String val is: " + str);
+		else												//else condition
+			System.out.println("String val is: " + str);	//print the following setence.
 	}
 
 }

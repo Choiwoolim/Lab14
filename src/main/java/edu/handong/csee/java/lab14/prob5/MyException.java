@@ -1,23 +1,23 @@
-package edu.handong.csee.java.lab14.prob5;
+package edu.handong.csee.java.lab14.prob5;			//package name
 
-public class MyException extends Exception{
-	private String message = null;
+public class MyException extends Exception{			//class name is MyException. it extends exception
+	private String message = null;					//declare the private string type message.
 
-	public MyException() {
-		super();
+	public MyException() {							//instantiate the myException
+		super();									//superclass.
 	}
 
-	public MyException(String message) {
-		super(message);
-		this.message = message;
+	public MyException(String message) {			//instantiate the my exception class. include message
+		super(message);								//super of message
+		this.message = message;						//assign the message
 	}
 
-	public MyException(Throwable cause) {
-		super(cause);
+	public MyException(Throwable cause) {			//instantiate the my exception class. include cause
+		super(cause);								//super of cause
 	}
 
-	public String toString() {
-		return message;
+	public String toString() {						//Create the toString method.
+		return message;								//return the message
 	}
 
 }
